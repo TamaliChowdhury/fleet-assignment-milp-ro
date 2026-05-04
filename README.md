@@ -1,7 +1,7 @@
 # Fleet Assignment Under Structural Shocks
 
 ## Project Overview
-This project addresses the challenge short-haul carriers face when hit by **structural fleet shocks**—such as manufacturer-wide groundings or regulator-issued capacity caps—where standard stochastic distributions for aircraft availability do not apply[cite: 3]. It utilizes a four-phase analytical framework to determine which routes to preserve and which to drop when fleet availability is uncertain[cite: 3].
+This project addresses the challenge short-haul carriers face when hit by **structural fleet shocks**—such as manufacturer-wide groundings or regulator-issued capacity caps—where standard stochastic distributions for aircraft availability do not apply. It utilizes a four-phase analytical framework to determine which routes to preserve and which to drop when fleet availability is uncertain
 
 
 
@@ -9,25 +9,25 @@ This project addresses the challenge short-haul carriers face when hit by **stru
 The project is executed in four distinct phases, integrated within a single Python environment:
 
 1.  **Phase I: MILP Baseline**
-    *   A **Mixed-Integer Linear Programme (MILP)** solves for the deterministic optimum of each specific disruption scenario[cite: 3].
-    *   **Objective:** Minimize a priority-weighted cost function that protects high-demand "trunk routes" over secondary routes[cite: 3].
+    *   A **Mixed-Integer Linear Programme (MILP)** solves for the deterministic optimum of each specific disruption scenario.
+    *   **Objective:** Minimize a priority-weighted cost function that protects high-demand "trunk routes" over secondary routes.
 2.  **Phase II: Robust Optimisation**
-    *   Implements **Minimax** and **Minimax Regret** formulations to find a single "committed plan" before the specific disruption is revealed[cite: 3].
-    *   Results show that Minimax Regret achieves a regret value of $v=0$ for this specific nested scenario set[cite: 3].
+    *   Implements **Minimax** and **Minimax Regret** formulations to find a single "committed plan" before the specific disruption is revealed.
+    *   Results show that Minimax Regret achieves a regret value of $v=0$ for this specific nested scenario set.
 3.  **Phase III: Multi-Objective Pareto Analysis**
-    *   Explores the trade-off between **operating cost** and **network coverage**[cite: 3].
-    *   Identifies non-dominated solutions across a weighting spectrum ($\alpha$) to assist carrier decision-making[cite: 3].
+    *   Explores the trade-off between **operating cost** and **network coverage**.
+    *   Identifies non-dominated solutions across a weighting spectrum ($\alpha$) to assist carrier decision-making.
 4.  **Phase IV: Monte Carlo Validation**
-    *   Stress-tests the committed plan against **15,000 random grounding trials** across three regimes: Stable, Stressed, and Crisis[cite: 3].
-    *   Includes a Python-based animation of the fleet assignment performance[cite: 3].
+    *   Stress-tests the committed plan against **15,000 random grounding trials** across three regimes: Stable, Stressed, and Crisis.
+    *   Includes a Python-based animation of the fleet assignment performance.
 
 ## Technical Implementation
 
 ### Prerequisites
 *   **Python 3.x**
 *   **Gurobi Optimizer 12.0** (Requires a valid license)
-*   **NumPy:** For data handling and Monte Carlo sampling[cite: 3].
-*   **Matplotlib:** For generating result visualizations and animations[cite: 3].
+*   **NumPy:** For data handling and Monte Carlo sampling.
+*   **Matplotlib:** For generating result visualizations and animations.
 
 ### Data Calibration
 The model parameters are calibrated against **Indian DGCA traffic data (2021-22)**[cite: 3]. This specific period captures demand patterns under actual regulatory stress, ensuring the model's relevance to real-world disruptions[cite: 3].
